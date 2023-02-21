@@ -15,6 +15,15 @@ function start() {
 
     function currentWeather(city) {
         let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city +  "&units=imperial&appid=" + APIKey;
-        
+
+        fetch(queryURL)
+         .then((Response) => Response.json())
+         .then((data) => {
+            console.log(data);
+
+            cityName.innerText = city;
+            weatherIcon.setAttribute("src","http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
+            
+         });
     }
 }
