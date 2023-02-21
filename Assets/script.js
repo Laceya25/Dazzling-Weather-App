@@ -1,0 +1,11 @@
+let searchBtn = document.querySelector("#searchBtn");
+let citySearch = document.querySelector("#citySearch");
+let cityName = document.querySelector("#city");
+let temp = document.querySelector("#temp");
+let humidity = document.querySelector("#humidity");
+let windSpeet = document.querySelector("#wind-spd");
+let weatherIcon = document.querySelector("#weatherIcon");
+let forecastContainer = document.querySelector("#forecast-container");
+let history = document.getElementById("history");
+let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+let clearH = document.getElementById("clear-H")
