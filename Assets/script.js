@@ -9,3 +9,12 @@ let forecastContainer = document.querySelector("#forecast-container");
 let history = document.getElementById("history");
 let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 let clearH = document.getElementById("clear-H")
+
+function start() {
+    const APIKey ="59e0d5247e1028ae9dbf1071b7d55e24";
+
+    function currentWeather(city) {
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city +  "&units=imperial&appid=" + APIKey;
+        
+    }
+}
