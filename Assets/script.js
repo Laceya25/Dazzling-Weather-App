@@ -26,4 +26,17 @@ function start() {
             
          });
     }
+
+    function getFiveDayForecast(cast) {
+        let queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" +
+        cast +
+        "&units=imperial&appid=" +
+        APIKey;
+
+        fetch(queryURL)
+        .then((Response) => Response.json())
+        .then((data) => {
+            console.log(data);
+        })
+    }
 }
