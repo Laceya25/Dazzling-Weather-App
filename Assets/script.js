@@ -14,7 +14,7 @@ function start() {
     const APIKey ="59e0d5247e1028ae9dbf1071b7d55e24";
 
     function currentWeather(city) {
-        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city +  "&units=imperial&appid=" + APIKey;
+        let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +  "&units=imperial&appid=" + APIKey;
 
         fetch(queryURL)
          .then((Response) => Response.json())
@@ -28,7 +28,7 @@ function start() {
     }
 
     function getFiveDayForecast(cast) {
-        let queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" +
+        let queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" +
         cast +
         "&units=imperial&appid=" +
         APIKey;
@@ -38,5 +38,9 @@ function start() {
         .then((data) => {
             console.log(data);
         })
+    }
+
+    searchBtn.on('click', function() {
+        console.log("Search Button");
     }
 }
